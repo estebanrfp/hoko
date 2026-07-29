@@ -23,7 +23,7 @@ tracking and not navigation.
 
 - Preact + Signals for UI reactivity
 - GenosDB (WebRTC + Nostr signaling) for P2P networking
-- SQLite (sqlocal) for local GTFS stop/route data
+- GenosDB (OPFS graph store + geo module) for local GTFS stop/route data
 - Leaflet + OpenStreetMap for map rendering
 - Tailwind CSS
 
@@ -49,7 +49,7 @@ leftovers. The cluster center is the average lat/lon of all grouped feeders.
 
 **Smart session revive** — on page reload, the app checks if the user had a
 chosen route/stop (persisted in localStorage). Instead of blindly rejoining, it
-queries all stops on that route from the local SQLite DB, then uses haversine
+queries all stops on that route from the local GenosDB store, then uses haversine
 distance to check if the user's current GPS position is within 500m of any route
 stop. If close — revives the P2P session and resumes tracking. If too far (e.g.
 user went home) — clears the stale persisted state so they start fresh.

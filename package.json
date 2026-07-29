@@ -8,8 +8,7 @@
   "dependencies": {
     "@preact/signals": "^2.10.0",
     "genosdb": "^0.22.2",
-    "leaflet": "^1.9.4",
-    "sqlocal": "^0.18.0"
+    "leaflet": "^1.9.4"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.5.5",

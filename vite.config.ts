@@ -1,6 +1,5 @@
 import preact from '@preact/preset-vite'
 import tailwindcss from '@tailwindcss/vite'
-import sqlocal from 'sqlocal/vite'
 import Icons from 'unplugin-icons/vite'
 import { defineConfig } from 'vite'
 import { VitePWA } from 'vite-plugin-pwa'
@@ -8,7 +7,6 @@ import { VitePWA } from 'vite-plugin-pwa'
 export default defineConfig({
   plugins: [
     preact(),
-    sqlocal(),
     Icons({
       autoInstall: true,
       compiler: 'jsx',
@@ -55,7 +53,7 @@ export default defineConfig({
     ]
   },
   optimizeDeps: {
-    exclude: ['sqlocal', 'genosdb']
+    exclude: ['genosdb']
   },
   server: {
     allowedHosts: ['hoko.test']
