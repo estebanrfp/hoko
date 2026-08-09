@@ -6,7 +6,7 @@
       "name": "my-app",
       "dependencies": {
         "@preact/signals": "^2.10.0",
-        "genosdb": "0.22.8",
+        "genosdb": "0.23.0",
         "leaflet": "^1.9.4",
       },
       "devDependencies": {
@@ -654,7 +654,7 @@
 
     "functions-have-names": ["functions-have-names@1.2.3", "", {}, "sha512-xckBUXyTIqT97tq2x2AMb+g163b5JFysYk0x4qxNFwbfQkmNZoiRHb6sPzI9/QV33WeuvVYBUIiD4NzNIyqaRQ=="],
 
-    "genosdb": ["genosdb@0.22.8", "", {}, "sha512-y3RlmZtOXqF3QMVCZn06v9ardxhsD3QlbHQ7qfC1JXsZmq5y20+d1WQR0p/P+wD+ypydNYb02Sc+6PwHTp8jgw=="],
+    "genosdb": ["genosdb@0.23.0", "", {}, "sha512-yKcZUFFgcZEJ/J0BKVy/ysNRcrCEaqLvS9NmpJ5eCZmNwPs+Cl45Xa7CIny++dvByx+vEamNly1+A7NViBna1A=="],
 
     "gensync": ["gensync@1.0.0-beta.2", "", {}, "sha512-3hN7NaskYvMDLQY55gnW3NQ+mesEAepTqlg+VEbj7zzqEMBVNhzcGYYeqFo/TlYz6eQiFcp1HcsCZO+nGgS8zg=="],
 
