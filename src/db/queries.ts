@@ -58,9 +58,8 @@ export async function getClosestStops(
   const { results } = await db.map({
     query: {
       type: 'stop',
-      location: {
-        $bbox: { minLat, maxLat, minLng: minLon, maxLng: maxLon }
-      }
+      'location.latitude': { $between: [minLat, maxLat] },
+      'location.longitude': { $between: [minLon, maxLon] }
     }
   })
 

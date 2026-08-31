@@ -6,7 +6,7 @@ const SEED_CHUNK = 500
 
 const { gdb } = await import('genosdb')
 
-const db: GDB = await gdb('hoko-gtfs', { geo: true })
+const db: GDB = await gdb('hoko-gtfs')
 
 async function cleanupLegacySqlite() {
   localStorage.removeItem('init_db')
