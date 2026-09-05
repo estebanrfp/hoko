@@ -1,4 +1,5 @@
 import type { GDB, RoomChannel } from 'genosdb'
+import { GENOSDB } from '../db/engine'
 import type { Route } from '../db/schema'
 import {
   chosenRoute,
@@ -31,7 +32,7 @@ class Connection {
   private async ensureDB() {
     if (this.db) return
 
-    const { gdb } = await import('genosdb')
+    const { gdb } = await import(/* @vite-ignore */ GENOSDB)
 
     this.db = await gdb('hoko', { rtc: true })
 

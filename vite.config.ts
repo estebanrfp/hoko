@@ -19,7 +19,15 @@ export default defineConfig({
       workbox: {
         globPatterns: ['**/*.{js,css,html,json,svg,png,ico,wasm,sqlite}'],
         // 20 MB
-        maximumFileSizeToCacheInBytes: 20 * 1000 * 1000
+        maximumFileSizeToCacheInBytes: 20 * 1000 * 1000,
+        // The engine comes from the CDN: keep it usable offline, refresh in the background.
+        runtimeCaching: [
+          {
+            urlPattern: /^https:\/\/cdn\.jsdelivr\.net\/npm\/genosdb@latest\//,
+            handler: 'StaleWhileRevalidate',
+            options: { cacheName: 'genosdb-engine' }
+          }
+        ]
       },
       manifest: {
         name: 'Hōkō',

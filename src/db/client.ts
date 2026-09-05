@@ -1,10 +1,11 @@
 import type { GDB } from 'genosdb'
+import { GENOSDB } from './engine'
 import { isInitializingDatabase } from '../ui/stores'
 
 const SEED_VERSION = 1
 const SEED_CHUNK = 500
 
-const { gdb } = await import('genosdb')
+const { gdb } = await import(/* @vite-ignore */ GENOSDB)
 
 const db: GDB = await gdb('hoko-gtfs')
 
